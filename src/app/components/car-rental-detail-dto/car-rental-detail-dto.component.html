@@ -1,0 +1,29 @@
+<div *ngIf="dataLoaded==false" role="status">
+    <span class="visually-hidden">Loading...</span>
+  </div>
+<table *ngIf="dataLoaded!=false" class="table my-3">
+    <thead class="table-warning">        
+        <tr >
+            <th>#</th>
+            <th>Marka</th>
+            <th>Model</th>
+            <th>Renk</th>
+            <th>Müşteri Adı Soyadı</th>
+            <th>Günlük Kira</th>
+            <th>Kiralama Tarihi</th>
+            <th>Geri Teslim Tarihi</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let carrentaldetail of carRentalDetails">
+            <td>{{carrentaldetail.rentalId}}</td>
+            <td>{{carrentaldetail.brandName}}</td>
+            <td>{{carrentaldetail.carName}}</td>
+            <td>{{carrentaldetail.colorName}}</td>
+            <td>{{carrentaldetail.customerName}} {{carrentaldetail.customerLastName}}</td>
+            <td>{{carrentaldetail.dailyPrice}} TL</td>
+            <td>{{carrentaldetail.rentDate}}</td>
+            <td>{{carrentaldetail.returnDate}}</td>
+        </tr>
+    </tbody>
+</table>

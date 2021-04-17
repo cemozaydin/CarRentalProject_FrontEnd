@@ -1,0 +1,19 @@
+<div *ngIf="dataLoaded==false" role="status">
+    <span class="visually-hidden">Loading...</span>
+  </div>
+<table *ngIf="dataLoaded!=false" class="table my-3">
+    <thead class="table-success">        
+        <tr >
+            <th>#</th>            
+            <th>Müşteri Adı Soyadı</th>
+            <th>Şirket Adı</th>            
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let customerDetail of customerDetails">
+            <td>{{customerDetail.customerId}}</td>
+            <td>{{customerDetail.userName}} {{customerDetail.userLastName}}</td>
+            <td>{{customerDetail.companyName}}</td>           
+        </tr>
+    </tbody>
+</table>

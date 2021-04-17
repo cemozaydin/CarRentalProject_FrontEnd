@@ -14,6 +14,7 @@ import { RentalComponent } from './components/rental/rental.component';
 import { NaviComponent } from './components/navi/navi.component';
 import { CardetailComponent } from './components/cardetail/cardetail.component';
 import { CarRentalDetailDtoComponent } from './components/car-rental-detail-dto/car-rental-detail-dto.component';
+import { CustomerdetaildtoComponent } from './components/customerdetaildto/customerdetaildto.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { CarRentalDetailDtoComponent } from './components/car-rental-detail-dto/
     RentalComponent,
     NaviComponent,
     CardetailComponent,
-    CarRentalDetailDtoComponent
+    CarRentalDetailDtoComponent,
+    CustomerdetaildtoComponent
   ],
   imports: [
     BrowserModule,
